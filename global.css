@@ -1,129 +1,102 @@
-@media (max-width: 768px) {
-  body {
-    min-width: 100% !important;
+@import url("https://bjshare.vercel.app/dracula.css");
+
+@media (max-width: 900px) {
+  html, html body {
+    min-width: 0 !important;
     width: 100% !important;
+    position: static !important;
     overflow-x: hidden !important;
   }
 
-  #wrapper {
+  html body #wrapper,
+  html body #content,
+  html body #header,
+  html body #footer,
+  html body #alerts {
     width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  #content {
-    width: 100% !important;
-    margin: 0 !important;
-  }
+  html body #content { margin-top: 0 !important; padding: 0 6px !important; overflow: visible !important; }
 
-  .thin {
-    width: 100% !important;
-    padding: 0 10px !important;
-    box-sizing: border-box !important;
-  }
-
-  #menu {
-    position: relative !important;
-    top: auto !important;
-    width: 100% !important;
-    padding: 10px 5px !important;
-  }
-
-  #searchbars {
-    position: relative !important;
-    top: auto !important;
-    width: 100% !important;
-  }
-
-  #searchbars input {
-    width: 90% !important;
-    padding: 10px !important;
-  }
-
-  .sidebar {
+  html body .thin,
+  html body .widethin,
+  html body .main_column,
+  html body .sidebar {
     width: 100% !important;
     float: none !important;
-    margin: 20px 0 0 0 !important;
-  }
-
-  .main_column {
-    width: 100% !important;
-    float: none !important;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="search"],
-  select,
-  textarea {
-    width: 100% !important;
-    padding: 12px 10px !important;
-    font-size: 16px !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     box-sizing: border-box !important;
   }
 
-  button,
-  input[type="button"],
-  input[type="submit"],
-  a.button,
-  a.submit {
-    width: 100% !important;
-    padding: 12px 10px !important;
-    min-height: 44px !important;
-    font-size: 14px !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    margin: 8px 0 !important;
-  }
+  html body #logo { height: 90px !important; background-size: contain !important; }
+  html body #logo a { width: 100% !important; height: 90px !important; }
 
-  table {
-    width: 100% !important;
-    display: block !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  #userinfo {
+  html body #menu,
+  html body #userinfo,
+  html body #searchbars {
     position: relative !important;
     top: auto !important;
+    left: auto !important;
+    right: auto !important;
     width: 100% !important;
-    padding: 10px 5px !important;
+    min-width: 0 !important;
+    white-space: normal !important;
   }
 
-  #logo {
-    max-height: 120px !important;
+  html body #menu ul li,
+  html body #userinfo ul li {
+    display: inline-block !important;
+    margin: 2px !important;
+    padding: 8px 10px !important;
+    white-space: normal !important;
   }
 
-  img {
+  html body #menudrop ul li { float: none !important; display: inline-block !important; width: auto !important; }
+  html body #menudrop ul a { height: auto !important; padding: 10px !important; }
+
+  html body #searchbars input { width: 92% !important; font-size: 16px !important; }
+
+  html body input[type="text"],
+  html body input[type="password"],
+  html body input[type="search"],
+  html body select,
+  html body textarea {
     max-width: 100% !important;
-    height: auto !important;
-  }
-}
-
-@media (max-width: 480px) {
-  #menu ul li {
-    padding: 5px 2px !important;
-    font-size: 11px !important;
-  }
-
-  input[type="text"],
-  input[type="submit"],
-  textarea,
-  select {
     font-size: 16px !important;
+    min-height: 40px !important;
   }
 
-  button,
-  input[type="button"],
-  input[type="submit"] {
+  html body form textarea { width: 100% !important; }
+
+  html body input[type="submit"],
+  html body input[type="button"],
+  html body button {
     min-height: 44px !important;
-    padding: 10px 8px !important;
+    margin-left: 0 !important;
   }
 
-  table {
-    font-size: 12px !important;
-  }
+  html body .box,
+  html body .box2,
+  html body .box3 { max-width: 100% !important; overflow-x: auto !important; }
 
-  #logo {
-    max-height: 80px !important;
-  }
+  html body table { max-width: 100% !important; }
+  html body td, html body th { word-break: break-word; }
+
+  html body td.label { width: auto !important; }
+  html body td.avatar { width: 80px !important; }
+  html body table.forum_post td.body { width: auto !important; max-width: 100% !important; }
+
+  html body .permissions,
+  html body .permission_head,
+  html body .filter_torrents,
+  html body .edit_changelog textarea { width: 100% !important; }
+
+  html body .permission_container { float: none !important; width: 100% !important; }
+
+  html body img { max-width: 100% !important; height: auto; }
 }
