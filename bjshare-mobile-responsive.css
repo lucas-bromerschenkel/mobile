@@ -1,0 +1,1212 @@
+/**
+ * BJ-Share Mobile Responsive CSS
+ * Adaptação responsiva para celulares e tablets
+ * Mantém CSS original intacto, usa media queries
+ * 
+ * Compatível com todos os temas (Dracula, Cyberpunk, Midnight, etc)
+ * 
+ * APLICAR: Adicione via configurações de estilo do BJ-Share
+ * Ordem: Depois dos temas originais
+ * 
+ * Breakpoints:
+ * - 768px: Tablets e telas médias
+ * - 480px: Celulares (retrato)
+ * - 360px: Celulares pequenos
+ */
+
+/* ============================================
+   TABLET & MOBILE GENÉRICO (máx 768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+  
+  /* BASE - Remove restrições e ajusta fundamentals */
+  body {
+    min-width: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  html,
+  html body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    max-width: 100% !important;
+  }
+
+  /* LAYOUT PRINCIPAL */
+  #wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .thin,
+  .widethin {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* HEADER & LOGO - Redimensiona proporcionalmente */
+  #header {
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
+
+  #logo {
+    height: auto !important;
+    width: 100% !important;
+    max-height: 120px !important;
+    margin: 5px auto 0 !important;
+    padding: 5px 0 !important;
+  }
+
+  #logo a {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 120px !important;
+    display: block !important;
+    background-size: contain !important;
+    background-position: center !important;
+  }
+
+  /* MENU - Otimização para toque */
+  #menu {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    min-width: auto !important;
+    padding: 10px 5px !important;
+    margin: 5px 0 !important;
+    text-align: center !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #menu ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #menu ul li {
+    padding: 10px 8px !important;
+    margin: 3px 2px !important;
+    display: inline-block !important;
+    min-width: auto !important;
+    white-space: normal !important;
+    border-radius: 4px !important;
+  }
+
+  #menu ul li a {
+    padding: 8px 12px !important;
+    display: block !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+
+  /* USERINFO - Reposiciona para mobile */
+  #userinfo {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-width: auto !important;
+    padding: 10px 5px !important;
+    margin: 5px 0 10px !important;
+    text-align: center !important;
+  }
+
+  #userinfo ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  #userinfo ul li {
+    display: inline-block !important;
+    padding: 5px 8px !important;
+    margin: 3px 2px !important;
+    white-space: normal !important;
+  }
+
+  #userinfo a {
+    font-size: 12px !important;
+  }
+
+  #userinfo_username,
+  #userinfo_major {
+    position: static !important;
+    width: 100% !important;
+    margin: 5px 0 !important;
+    padding: 8px 5px !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+  }
+
+  /* SEARCHBARS - Repositiona e redimensiona */
+  #searchbars {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    min-width: auto !important;
+    padding: 10px 5px !important;
+    margin: 5px 0 !important;
+    text-align: center !important;
+  }
+
+  #searchbars input {
+    width: 90% !important;
+    max-width: 100% !important;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    margin: 5px 0 !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+
+  #searchbars ul {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  #searchbars ul li {
+    display: block !important;
+    margin: 5px 2px !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  #searchbars ul li ul {
+    position: static !important;
+    display: none !important;
+    width: 100% !important;
+    background: inherit !important;
+    margin-top: 5px !important;
+  }
+
+  #searchbars ul li:hover ul {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #searchbars ul li ul li {
+    width: 100% !important;
+  }
+
+  /* MAIN COLUMN & SIDEBAR - Ajusta layout */
+  .main_column {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    float: none !important;
+    margin: 15px 0 0 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    left: auto !important;
+  }
+
+  .sidebar img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* TABELAS - Torna scrolláveis e responsivas */
+  table,
+  .table-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 15px !important;
+  }
+
+  table tr,
+  table th,
+  table td {
+    font-size: 13px !important;
+    padding: 8px 5px !important;
+  }
+
+  .colhead td,
+  .colhead th {
+    padding: 8px 5px !important;
+  }
+
+  table.forum_post {
+    display: block !important;
+  }
+
+  table.forum_post tr {
+    display: block !important;
+    margin-bottom: 15px !important;
+    border: 1px solid #ddd !important;
+    padding: 10px !important;
+  }
+
+  table.forum_post td {
+    display: block !important;
+    text-align: left !important;
+    padding: 8px 0 !important;
+    border: none !important;
+  }
+
+  table.forum_post td.avatar {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+    padding: 10px 0 !important;
+  }
+
+  table.forum_post td.body {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  td.avatar {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* FORMULÁRIOS & INPUTS */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="button"],
+  input[type="submit"],
+  select,
+  textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 10px !important;
+    margin: 8px 0 !important;
+    font-size: 16px !important; /* Evita zoom automático em iOS */
+    box-sizing: border-box !important;
+  }
+
+  .edit_changelog textarea {
+    width: 100% !important;
+  }
+
+  form textarea {
+    width: 100% !important;
+  }
+
+  form tr {
+    display: block !important;
+    margin-bottom: 10px !important;
+  }
+
+  form textarea {
+    max-width: 100% !important;
+  }
+
+  /* BOTÕES - Aumenta tamanho e melhora toque */
+  button,
+  input[type="button"],
+  input[type="submit"],
+  .button,
+  a.button,
+  a.submit,
+  a.BigButton {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 10px !important;
+    margin: 8px 0 !important;
+    font-size: 14px !important;
+    min-height: 44px !important; /* Touch target size */
+    box-sizing: border-box !important;
+    display: block !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    transform: none !important;
+  }
+
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover {
+    transform: none !important;
+  }
+
+  input[type="button"] {
+    margin-left: 0 !important;
+  }
+
+  /* BOXES & CONTAINERS */
+  .box,
+  .box2,
+  .box3 {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 10px 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .pad {
+    padding: 10px 8px !important;
+  }
+
+  /* MENUS DROPDOWN */
+  #menudrop ul li {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 5px 2px !important;
+    padding: 5px !important;
+  }
+
+  #menudrop ul a {
+    display: block !important;
+    padding: 10px !important;
+    font-size: 13px !important;
+    white-space: normal !important;
+    transform: none !important;
+  }
+
+  #menudrop ul ul {
+    position: static !important;
+    display: none !important;
+    width: 100% !important;
+    padding: 5px 0 !important;
+    margin-top: 5px !important;
+  }
+
+  #menudrop ul li:hover ul {
+    display: block !important;
+  }
+
+  #menudrop ul ul li {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* ALERTAS & NOTIFICAÇÕES */
+  .alertbar {
+    width: 100% !important;
+    padding: 12px 10px !important;
+    margin: 10px 0 !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+  }
+
+  #alerts {
+    width: 100% !important;
+    min-width: auto !important;
+    padding: 10px 5px !important;
+    margin: 10px 0 !important;
+  }
+
+  /* FILTROS & CATEGORIAS */
+  .filter_torrents {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+  }
+
+  #cat-selector ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  #cat-selector ul li {
+    flex: 1 1 calc(50% - 10px) !important;
+    min-width: 150px !important;
+    margin: 5px !important;
+    width: auto !important;
+    height: auto !important;
+    float: none !important;
+  }
+
+  /* PAGINATION & LINKS */
+  div.linkbox {
+    width: 100% !important;
+    padding: 10px 5px !important;
+    text-align: center !important;
+  }
+
+  div.linkbox a {
+    display: inline-block !important;
+    margin: 5px 2px !important;
+    padding: 8px 10px !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* TORRENT LIST */
+  .torrent_table tr {
+    font-size: 12px !important;
+  }
+
+  .torrent span,
+  .group_torrent span {
+    float: none !important;
+    display: block !important;
+    margin-top: 5px !important;
+  }
+
+  /* TAGS */
+  .tags {
+    padding: 5px 0 5px 10px !important;
+    font-size: 11px !important;
+  }
+
+  /* FOOTER */
+  #footer {
+    width: 100% !important;
+    padding: 15px 10px !important;
+    margin: 15px 0 0 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* LIGHTBOX & MODALS */
+  .lightbox {
+    width: 95% !important;
+    left: 2.5% !important;
+    height: 95% !important;
+    top: 2.5% !important;
+  }
+
+  /* PERMISSÕES & LISTAS ESPECIAIS */
+  .permissions {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .permission_container {
+    float: none !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
+
+  /* BANNER/CAROUSEL */
+  #container {
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  ul.bjqs-controls.v-centered li.bjqs-next a,
+  ul.bjqs-controls.v-centered li.bjqs-prev a {
+    margin-top: 50% !important;
+    min-width: 50px !important;
+    padding: 8px 6px !important;
+  }
+
+  /* ICONS & SHOW/HIDE */
+  .show_torrents,
+  .hide_torrents {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+  }
+
+  /* CHAT & IRC */
+  #chatoutput {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 300px !important;
+    box-sizing: border-box !important;
+  }
+
+  #chatForm input[type="text"] {
+    width: 100% !important;
+  }
+
+  /* RADIO & CHECKBOXES - Aumenta área de toque */
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 5px !important;
+    cursor: pointer !important;
+  }
+
+  label {
+    margin: 5px 0 !important;
+  }
+
+  #content .cat_list label {
+    padding-left: 35px !important;
+    display: block !important;
+    margin: 8px 0 !important;
+  }
+
+  /* INFOBOX TOOLTIP */
+  a.BJinfoBox span {
+    display: none !important;
+  }
+
+  /* SCROLL TO TOP */
+  #irtopo {
+    width: 50px !important;
+    height: 50px !important;
+    right: 5px !important;
+    bottom: 5px !important;
+  }
+
+  #irfinal {
+    width: 50px !important;
+    height: 50px !important;
+    right: 5px !important;
+    bottom: 65px !important;
+  }
+
+  /* FORUM */
+  strong.quoteheader {
+    display: block !important;
+    margin: 5px 0 !important;
+  }
+
+  blockquote {
+    margin: 10px 0 !important;
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* PERMISSIONS HEAD */
+  .permission_head {
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TEXT HELPERS */
+  .center {
+    text-align: center !important;
+  }
+
+  .right {
+    text-align: left !important;
+  }
+
+  /* INVITES */
+  ul .invitetree {
+    margin: 0 0 0 15px !important;
+  }
+
+  /* SELECTS */
+  select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    padding-right: 25px !important;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M1 4l5 5 5-5'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 8px center !important;
+  }
+
+  /* WHITESPACE & SPACING */
+  .vertical_space {
+    margin-bottom: 15px !important;
+  }
+
+  p {
+    margin: 10px 0 !important;
+  }
+
+  li {
+    margin: 8px 10px !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0 5px 0 !important;
+    font-size: 1em !important;
+    word-break: break-word !important;
+  }
+
+  h1 {
+    font-size: 1.3em !important;
+  }
+
+  h2 {
+    font-size: 1.1em !important;
+  }
+
+  /* SCROLLING & OVERFLOW */
+  body {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* META VIEWPORT (note: normalmente no HTML, mas pode ajudar via CSS) */
+  body::before {
+    content: "";
+    display: none;
+  }
+
+  /* IMPRESSORAS */
+  @media print {
+    .sidebar {
+      display: none !important;
+    }
+    
+    #menu,
+    #userinfo,
+    #searchbars,
+    #footer {
+      display: none !important;
+    }
+    
+    .main_column {
+      width: 100% !important;
+    }
+  }
+
+} /* FIM @media (max-width: 768px) */
+
+/* ============================================
+   MOBILE RETRATO (máx 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+
+  /* COMPRESSÃO EXTREMA */
+  #userinfo_username,
+  #userinfo_major {
+    width: 100% !important;
+  }
+
+  #menu ul li {
+    padding: 8px 4px !important;
+    font-size: 12px !important;
+  }
+
+  #menu ul li a {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+  }
+
+  #searchbars input {
+    width: 100% !important;
+    font-size: 16px !important; /* iOS zoom fix */
+  }
+
+  /* BOTÕES & INPUTS - Modo compacto mas tátil */
+  button,
+  input[type="button"],
+  input[type="submit"],
+  .button,
+  a.button {
+    min-height: 44px !important;
+    font-size: 13px !important;
+    padding: 10px 8px !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  select,
+  textarea {
+    font-size: 16px !important; /* Evita zoom em iOS */
+    padding: 10px 8px !important;
+  }
+
+  /* TABELAS - Extremamente compactas */
+  table tr,
+  table th,
+  table td {
+    font-size: 11px !important;
+    padding: 5px 3px !important;
+  }
+
+  .colhead td,
+  .colhead th {
+    padding: 5px 3px !important;
+    font-size: 10px !important;
+  }
+
+  /* MENUS - Minimalista */
+  #menu {
+    padding: 5px 0 !important;
+  }
+
+  #menudrop ul a {
+    padding: 8px 6px !important;
+    font-size: 11px !important;
+  }
+
+  /* SIDEBAR - Stack total */
+  .sidebar {
+    margin-top: 20px !important;
+  }
+
+  /* ALERTAS */
+  .alertbar {
+    padding: 8px 5px !important;
+    font-size: 12px !important;
+  }
+
+  /* CATEGORIAS - 1 por linha ou wrap agressivo */
+  #cat-selector ul li {
+    flex: 1 1 100% !important;
+  }
+
+  /* FOOTER - Compacto */
+  #footer {
+    padding: 10px 5px !important;
+    font-size: 11px !important;
+  }
+
+  /* HEADING - Bem pequeno */
+  h1, h2, h3, h4 {
+    font-size: 0.95em !important;
+    margin: 8px 0 3px 0 !important;
+  }
+
+  /* TAGS - Muito compactas */
+  .tags {
+    padding: 2px 0 2px 8px !important;
+    font-size: 10px !important;
+  }
+
+  /* LOGO - Super reduzido */
+  #logo {
+    max-height: 80px !important;
+  }
+
+  /* BOXES - Padding reduzido */
+  .box,
+  .box2,
+  .box3 {
+    padding: 8px 5px !important;
+    margin: 8px 0 !important;
+  }
+
+  .pad {
+    padding: 8px 5px !important;
+  }
+
+  /* USERINFO - Inline wrap agressivo */
+  #userinfo ul li {
+    padding: 3px 4px !important;
+    font-size: 11px !important;
+  }
+
+  /* SCROLL TO TOP - Maior para toque fácil */
+  #irtopo,
+  #irfinal {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  /* INPUTS CHECKBOX/RADIO */
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  #content .cat_list label {
+    padding-left: 30px !important;
+    font-size: 12px !important;
+  }
+
+  /* LINKBOX */
+  div.linkbox a {
+    display: inline-block !important;
+    margin: 3px 1px !important;
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+  }
+
+  /* CHAT */
+  #chatoutput {
+    height: 250px !important;
+  }
+
+  /* FORUM POST */
+  table.forum_post td {
+    font-size: 12px !important;
+  }
+
+  td.avatar {
+    padding: 5px 0 !important;
+  }
+
+  /* QUOTES */
+  blockquote {
+    margin: 5px 0 !important;
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  /* LINHAS DIVISORAS */
+  .vertical_space {
+    margin-bottom: 10px !important;
+  }
+
+  /* CAROUSEL */
+  ul.bjqs-controls.v-centered li.bjqs-next a,
+  ul.bjqs-controls.v-centered li.bjqs-prev a {
+    min-width: 40px !important;
+    padding: 6px 4px !important;
+    font-size: 11px !important;
+  }
+
+  /* TEXT */
+  body {
+    font-size: 12px !important;
+  }
+
+  p {
+    margin: 8px 0 !important;
+    font-size: 12px !important;
+  }
+
+  li {
+    margin: 5px 8px !important;
+  }
+
+  /* FLEX - Ajusta wrap */
+  #menu ul,
+  #userinfo ul,
+  #searchbars ul {
+    gap: 3px !important;
+  }
+
+  /* SHOW/HIDE TORRENTS */
+  .show_torrents,
+  .hide_torrents {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* TEXTAREA */
+  textarea {
+    min-height: 100px !important;
+  }
+
+  /* INFOBOX */
+  a.BJinfoBox span {
+    display: none !important;
+  }
+
+  /* LIGHTBOX */
+  .lightbox {
+    width: 98% !important;
+    left: 1% !important;
+    height: 98% !important;
+    top: 1% !important;
+  }
+
+} /* FIM @media (max-width: 480px) */
+
+/* ============================================
+   CELULARES MUITO PEQUENOS (máx 360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+
+  /* ULTRA COMPACTO */
+  #menu ul li {
+    padding: 5px 2px !important;
+    min-width: auto !important;
+    flex: 1 1 auto !important;
+  }
+
+  #menu ul li a {
+    padding: 5px 4px !important;
+    font-size: 10px !important;
+  }
+
+  /* FULL WIDTH INPUTS */
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 14px !important; /* iOS zoom */
+    padding: 8px 6px !important;
+  }
+
+  /* TABELAS - Scroll imperativo */
+  table {
+    font-size: 10px !important;
+  }
+
+  table tr,
+  table th,
+  table td {
+    padding: 3px 2px !important;
+  }
+
+  /* HEADER REDUZIDO */
+  #logo {
+    max-height: 60px !important;
+  }
+
+  #userinfo_username,
+  #userinfo_major {
+    font-size: 10px !important;
+  }
+
+  #userinfo ul li {
+    padding: 2px 2px !important;
+    font-size: 10px !important;
+  }
+
+  #userinfo a {
+    font-size: 10px !important;
+  }
+
+  /* BOTÕES STACK 100% */
+  button,
+  input[type="button"],
+  input[type="submit"],
+  .button {
+    width: 100% !important;
+    margin: 5px 0 !important;
+  }
+
+  /* HEADING ULTRA PEQUENO */
+  h1, h2, h3, h4, h5 {
+    font-size: 0.85em !important;
+    margin: 5px 0 2px 0 !important;
+  }
+
+  body {
+    font-size: 11px !important;
+  }
+
+  /* BODY TEXT */
+  p {
+    font-size: 11px !important;
+    margin: 5px 0 !important;
+  }
+
+  /* SPACING MINIMAL */
+  .box,
+  .box2,
+  .box3 {
+    margin: 5px 0 !important;
+    padding: 5px 3px !important;
+  }
+
+  /* ALERTAS */
+  .alertbar {
+    padding: 6px 3px !important;
+    font-size: 10px !important;
+    font-weight: normal !important;
+  }
+
+  /* FOOTER */
+  #footer {
+    font-size: 10px !important;
+    padding: 8px 3px !important;
+  }
+
+  /* TAGS */
+  .tags {
+    font-size: 9px !important;
+  }
+
+  /* DIVIDERS */
+  .vertical_space {
+    margin-bottom: 8px !important;
+  }
+
+  /* USERINFO - Muito compacto */
+  #userinfo {
+    padding: 5px 2px !important;
+  }
+
+  /* LINKBOX */
+  div.linkbox a {
+    padding: 4px 5px !important;
+    font-size: 10px !important;
+    margin: 2px 0px !important;
+    display: block !important;
+  }
+
+  /* FORM */
+  label {
+    font-size: 11px !important;
+  }
+
+  #content .cat_list label {
+    padding-left: 25px !important;
+    font-size: 10px !important;
+  }
+
+  /* SCROLL BUTTONS */
+  #irtopo,
+  #irfinal {
+    width: 40px !important;
+    height: 40px !important;
+    right: 3px !important;
+  }
+
+  /* CAROUSEL */
+  ul.bjqs-controls.v-centered li.bjqs-next a,
+  ul.bjqs-controls.v-centered li.bjqs-prev a {
+    min-width: 35px !important;
+    padding: 5px 3px !important;
+    font-size: 10px !important;
+  }
+
+} /* FIM @media (max-width: 360px) */
+
+/* ============================================
+   ORIENTAÇÃO LANDSCAPE (adicional)
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  
+  #logo {
+    max-height: 60px !important;
+  }
+
+  #menu {
+    padding: 5px 0 !important;
+  }
+
+  #menu ul li {
+    padding: 5px 4px !important;
+    font-size: 12px !important;
+  }
+
+  .sidebar {
+    margin-top: 10px !important;
+  }
+
+  table tr,
+  table th,
+  table td {
+    padding: 3px !important;
+    font-size: 11px !important;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 36px !important;
+  }
+
+} /* FIM orientação landscape */
+
+/* ============================================
+   MELHORIAS GERAIS & ACESSIBILIDADE
+   ============================================ */
+
+/* Touch-friendly links */
+a:active {
+  opacity: 0.7;
+}
+
+/* Finger-friendly elements */
+button:active,
+input:active,
+textarea:active {
+  opacity: 0.85;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default iOS styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* Safari input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  font-size: 16px; /* Prevent iOS zoom on focus */
+}
+
+/* Prevents 300ms delay on click */
+@media (hover: hover) {
+  a, button, input[type="button"], input[type="submit"] {
+    transition: all 0.2s ease;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+
+  #menu,
+  #userinfo,
+  #searchbars,
+  .sidebar,
+  #footer,
+  .show_torrents,
+  .hide_torrents {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   ANIMAÇÕES & TRANSIÇÕES
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* FIM DO ARQUIVO */
