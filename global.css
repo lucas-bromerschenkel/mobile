@@ -1,0 +1,129 @@
+@media (max-width: 768px) {
+  body {
+    min-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #wrapper {
+    width: 100% !important;
+  }
+
+  #content {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .thin {
+    width: 100% !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  #menu {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    padding: 10px 5px !important;
+  }
+
+  #searchbars {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+
+  #searchbars input {
+    width: 90% !important;
+    padding: 10px !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    float: none !important;
+    margin: 20px 0 0 0 !important;
+  }
+
+  .main_column {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  select,
+  textarea {
+    width: 100% !important;
+    padding: 12px 10px !important;
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"],
+  a.button,
+  a.submit {
+    width: 100% !important;
+    padding: 12px 10px !important;
+    min-height: 44px !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    margin: 8px 0 !important;
+  }
+
+  table {
+    width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #userinfo {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    padding: 10px 5px !important;
+  }
+
+  #logo {
+    max-height: 120px !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #menu ul li {
+    padding: 5px 2px !important;
+    font-size: 11px !important;
+  }
+
+  input[type="text"],
+  input[type="submit"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px !important;
+    padding: 10px 8px !important;
+  }
+
+  table {
+    font-size: 12px !important;
+  }
+
+  #logo {
+    max-height: 80px !important;
+  }
+}
